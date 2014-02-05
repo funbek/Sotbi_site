@@ -1,0 +1,300 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+/*end reset*/
+
+
+/* style start */
+
+/*all*/
+.mobile_resolution{
+	display: block;
+}
+.wide_resolution{
+	display: none;
+}
+
+#page{
+	margin: 0 auto;
+	width: 100%
+}
+
+
+/* Effect 1: Brackets */
+.cl-effect-1::before,
+.cl-effect-1::after {
+	display: inline-block;
+	opacity: 0;
+	-webkit-transition: -webkit-transform 0.3s, opacity 0.2s;
+	-moz-transition: -moz-transform 0.3s, opacity 0.2s;
+	transition: transform 0.3s, opacity 0.2s;
+}
+
+.cl-effect-1::before {
+	margin-right: 10px;
+	content: '[';
+	-webkit-transform: translateX(20px);
+	-moz-transform: translateX(20px);
+	transform: translateX(20px);
+}
+
+.cl-effect-1::after {
+	margin-left: 10px;
+	content: ']';
+	-webkit-transform: translateX(-20px);
+	-moz-transform: translateX(-20px);
+	transform: translateX(-20px);
+}
+
+.cl-effect-1:hover::before,
+.cl-effect-1:hover::after,
+.cl-effect-1:focus::before,
+.cl-effect-1:focus::after {
+	opacity: 1;
+	-webkit-transform: translateX(0px);
+	-moz-transform: translateX(0px);
+	transform: translateX(0px);
+}
+
+/*header*/
+header{
+	background: rgb(70,198,143); /* Old browsers */
+	background: -moz-linear-gradient(top,  rgba(70,198,143,1) 0%, rgba(55,164,117,1) 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(70,198,143,1)), color-stop(100%,rgba(55,164,117,1))); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top,  rgba(70,198,143,1) 0%,rgba(55,164,117,1) 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top,  rgba(70,198,143,1) 0%,rgba(55,164,117,1) 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top,  rgba(70,198,143,1) 0%,rgba(55,164,117,1) 100%); /* IE10+ */
+	background: linear-gradient(to bottom,  rgba(70,198,143,1) 0%,rgba(55,164,117,1) 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#46c68f', endColorstr='#37a475',GradientType=0 ); /* IE6-9 */
+
+	border-bottom: 4px solid #5b9;
+}
+header:after, .content_style_bg:after, .menu:after, .float_clear:after{
+	content: ".";
+	clear: both;
+	display: block;
+	visibility: hidden;
+	height: 0;
+}
+
+/*content*/
+
+
+/*footer*/
+
+
+/* style end */
+
+/*media tablet*/
+@media all and (min-width: 767px){
+	/*all*/
+	.wide_resolution{
+		display: block;
+	}
+	.mobile_resolution{
+		display: none;
+	}
+}
+
+
+/*media screen*/
+@media all and (min-width: 980px){
+	
+}
+
+
+/*media high screen*/
+@media all and (min-width: 1200px){
+	/*all*/
+	header, footer{
+		width: 100%;
+		padding-top: 20px;
+		padding-bottom: 20px
+	}
+
+	.container{
+		width: 1170px;
+		margin: 0 auto;
+		text-align: center;
+	}
+	#content{
+		background:url(../img/pattern1.png) #383f45 ;
+		padding-top: 0px;
+	}
+
+
+
+	/*header style*/
+	.logo_img{
+		width: 150px;
+		height: 150px;
+		background: rgba(220,220,220,.7);
+		display: block;
+		float: left;
+		-moz-border-radius: 5px;
+		-webkit-border-radius: 5px; 
+		-khtml-border-radius: 5px; 
+		border-radius: 5px;
+
+		-webkit-transition: all 0.2s ease-in-out;
+		-moz-transition: all 0.2s ease-in-out;
+		-o-transition: all 0.2s ease-in-out;
+		-ms-transition: all 0.2s ease-in-out;
+	}
+	.logo_img:hover{
+		transform: Scale(1.15);
+		-ms-transform: scale(1.15); /* IE 9 */
+		-webkit-transform: scale(1.15); /* Safari and Chrome */
+		background: rgba(220,220,220,1);
+	}
+
+	hgroup{
+		width: 880px;
+		margin: 21px auto;
+		float: left;
+	}
+	h1{
+		text-transform: uppercase;
+		font: normal 65px bold 'PT Sans Narrow', Arial, sans-serif;
+		text-shadow: 2px 2px 5px rgba(0,0,0,.7);
+	}
+	h2.sub_name{
+		font: normal 18px bold 'PT Sans Narrow', Arial, sans-serif;
+	}
+	h2{
+		font: normal 50px bold 'PT Sans Narrow', Arial, sans-serif;
+	}
+	.socila_header{
+		width: 140px;
+		float: right;
+	}
+	.socila_header > a{
+		font: normal 18px bold 'PT Sans Narrow', Arial, sans-serif;
+		width: 40px;
+		height: 40px;
+		line-height: 225%;
+		display: block;
+		float: left;
+		margin-right: 10px;
+		-moz-border-radius: 3px;
+		-webkit-border-radius: 3px; 
+		-khtml-border-radius: 3px; 
+		border-radius: 3px; 
+		color: #ededed !important;
+		text-decoration: none;
+
+	}
+	.facebook,.vk,.twitter{
+		opacity: 0.7;
+		-webkit-transition: all 0.25s ease-in-out;
+		-moz-transition: all 0.25s ease-in-out;
+		-o-transition: all 0.25s ease-in-out;
+		-ms-transition: all 0.25s ease-in-out;
+	}
+	.facebook:hover,.vk:hover,.twitter:hover{
+		opacity: 1;
+	}
+	.facebook{
+		background: #34c;
+	}
+	.vk{
+		background: #349;
+	}
+	.socila_header >a.twitter{
+		background: #346;
+		margin-right: 0;
+	}
+
+
+	/*menu*/
+	.menu{
+		width: 100%;
+		padding: 20px 0;
+		border-bottom: 4px solid #333;
+		background: #383f45;
+	}
+	.menu nav{
+		margin:0 auto;
+		width: 970px;
+	}
+	.menu nav a{
+		color: #fff;
+		font: normal 30px bold 'PT Sans Narrow', Arial, sans-serif;
+		text-decoration: none;
+		display: block;
+		float: left;
+		padding: 0px 40px;
+		margin-right: 20px;
+		margin-left: 20px;
+
+	}
+	/*content*/
+	.content_stl{
+		width: 100%;
+	}
+	.content_stl h2{
+		padding: 20px 0;
+	}
+
+	.content_stl1{
+		background: #049e9c url(../img/pattern2.png);
+		border-bottom: 4px solid #444;
+	}
+	.content_stl .secretion_phrase{
+		margin: 30px 0;
+	}
+	.content_stl .secretion_phrase p{
+		float: left;
+		width: 390px;
+		font-weight: bold;
+		font-size: 30px;
+	}
+
+
+
+}
