@@ -3,10 +3,10 @@ $(function() {
          $("#sticker").sticky({ topSpacing: 0 });
 // use flat-shadow for icons
          $(".flat-icon").flatshadow({
-           color: "#383f45", // Background color of elements inside. (Color will be random if left unassigned)
+           color: "#000000", // Background color of elements inside. (Color will be random if left unassigned)
            angle: "SE", // Shadows direction. Available options: N, NE, E, SE, S, SW, W and NW. (Angle will be random if left unassigned)
            fade: true, // Gradient shadow effect
-           boxShadow: "#383f45" // Color of the Container's shadow
+           boxShadow: "#000000" // Color of the Container's shadow
          });
 
 // shadow for chief
