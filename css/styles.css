@@ -171,8 +171,8 @@ header:after, .content_style_bg:after, .menu:after, .float_clear:after{
 
 	/*header style*/
 	.logo_img{
-		width: 150px;
-		height: 150px;
+		width: 100px;
+		height: 100px;
 		background: rgba(220,220,220,.7);
 		display: block;
 		float: left;
@@ -195,13 +195,14 @@ header:after, .content_style_bg:after, .menu:after, .float_clear:after{
 
 	hgroup{
 		width: 880px;
-		margin: 21px auto;
+		margin: 0px auto;
 		float: left;
 	}
 	h1{
 		text-transform: uppercase;
 		font: normal 65px bold 'PT Sans Narrow', Arial, sans-serif;
 		text-shadow: 2px 2px 5px rgba(0,0,0,.7);
+		line-height: 70px;
 	}
 	h2.sub_name{
 		font: normal 18px bold 'PT Sans Narrow', Arial, sans-serif;
@@ -260,7 +261,7 @@ header:after, .content_style_bg:after, .menu:after, .float_clear:after{
 	}
 	.menu nav{
 		margin:0 auto;
-		width: 970px;
+		width: 1070px;
 	}
 	.menu nav a{
 		color: #fff;
