@@ -10,6 +10,8 @@
     <link rel="stylesheet" type="text/css" href="css/style.css" />
     <link rel="stylesheet" type="text/css" href="css/custom.css" />
 	<script type="text/javascript" src="js/modernizr.custom.79639.js"></script>
+	<link rel="stylesheet" type="text/css" href="css/component.css" />
+
 	<noscript>
 		<link rel="stylesheet" type="text/css" href="css/styleNoJS.css" />
 	</noscript>
@@ -28,22 +30,35 @@
 					Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perspiciatis, totam, suscipit, cum quidem illo eaque necessitatibus quae fugit earum inventore illum corporis modi ab nulla odio repudiandae exercitationem accusantium neque.
 				</p>
 
-
-			
+				<form action="#" id="contactform" method="post" class="formaction" name="getcontact">
+					<input class="label_better" placeholder="Your name" data-position="left" data-new-placeholder="Your name:" type="text" name="name">
+					<input class="label_better" placeholder="Email" data-position="left" data-new-placeholder="Email:" type="email" name="email">
+					<input class="label_better" placeholder="Your phone" data-position="left" data-new-placeholder="Your phone:" type="tel" name="phone">
+					<input class="submit_bth" type="submit" value="Заказать звонок" name="submit">
+				</form>
 			</section>
 
-			<div id="sticker" class="menu">
+			<div id="sticker" class="menu float_clear">
 				<div class="container">
-					<a href="#" class="logo_img"></a>
+					<a href="#" class="logo_img mobile"></a>
 					<nav>
+						<div class="wide_resolution">
 							<a class="cl-effect-1" href="#">link</a>
 							<a class="cl-effect-1" href="#">link</a>
 							<a class="cl-effect-1" href="#">link</a>
 							<a class="cl-effect-1" href="#">link</a>
 							<a class="cl-effect-1" href="#">link</a>
+						</div>
+						<select class="mobile_resolution">
+							<option selected="selected" value="##">select menu</option>
+							<option value="##">link</option>
+							<option value="##">link</option>
+							<option value="##">link</option>
+							<option value="##">link</option>
+							<option value="##">link</option>
+						</select>
 					</nav>
-					<div class="socila_header">
-
+					<div class="socila_header mobile">
 						<a data-color="#3b5998" class="facebook flat-icon" href="#">f</a>
 						<a data-color="#2B587A" class="vk flat-icon" href="#">vk</a>
 						<a data-color="#0084b4" class="twitter flat-icon" href="#">tw</a>
@@ -81,7 +96,7 @@
 						<div class="sl-slide-inner">
 							<div class="bg-img bg-img-3"></div>
 							<h2>Эффективный результат</h2>
-							<blockquote><p>Приятно когда результат видно сразу, а когда результат превосходит все ожидания еще приятнее...</p><cite>Fun Bek</cite></blockquote>
+							<blockquote><p>Приятно когда результат видно сразу, а когда результат превосходит все ожидания еще приятнее...</p><cite>FunBek</cite></blockquote>
 						</div>
 					</div>
 					
@@ -106,78 +121,166 @@
 
 			<div class="content_stl1 content_stl">
 				<section class="container">
-<ul class="grid cs-style-3">
-				<li>
-					<figure>
-						<img src="img/4.png" alt="img04">
-						<figcaption>
-							<h3>Небольшой заголовок</h3>
-							<span>Мы проводим мозговые штурмы и разрабатываем целый пакет идей и решений!</span>
-							<!-- <a href="http://dribbble.com/shots/1116685-Settings">Take a look</a> -->
-						</figcaption>
-					</figure>
-				</li>
-				<li>
-					<figure>
-						<img src="img/1.png" alt="img01">
-						<figcaption>
-							<h3>Небольшой заголовок</h3>
-							<span>У нас работают грамотные специалисты, мы качественно воплощаем идеи в жизнь.</span>
-						</figcaption>
-					</figure>
-				</li>
-				<li>
-					<figure>
-						<img src="img/2.png" alt="img02">
-						<figcaption>
-							<h3>Небольшой заголовок</h3>
-							<span>Мы идём до конца, пока наши решения не начнут приносить Вам прибыль.</span>
-						</figcaption>
-					</figure>
-				</li>
-				<li>
-					<figure>
-						<img src="img/5.png" alt="img05">
-						<figcaption>
-							<h3>Небольшой заголовок</h3>
-							<span>Наша задача: «Сделать Ваш бизнес эффективным и прибыльным»</span>
-						</figcaption>
-					</figure>
-				</li>
-				<li>
-					<figure>
-						<img src="img/3.png" alt="img03">
-						<figcaption>
-							<h3>Небольшой заголовок</h3>
-							<span>Нам нравится работать, а не просто говорить.</span>
-						</figcaption>
-					</figure>
-				</li>
-				<li>
-					<figure>
-						<img src="img/6.png" alt="img06">
-						<figcaption>
-							<h3>Небольшой заголовок</h3>
-							<span>Мы всегда на связи и поддерживаем наших клиентов даже после окончания проекта.</span>
-							
-						</figcaption>
-					</figure>
-				</li>
-			</ul>
+					<h2>Меньше слов больше смысла</h2>
+					<ul id="cbp-so-scroller" class="grid cs-style-3 cbp-so-scroller">
+						<li class="cbp-so-section">
+							<figure class="cbp-so-side cbp-so-side-left">
+								<img src="img/4.png" alt="img04">
+								<figcaption>
+									<h3>Небольшой заголовок</h3>
+									<span>Мы проводим мозговые штурмы и разрабатываем целый пакет идей и решений!</span>
+									<!-- <a href="http://dribbble.com/shots/1116685-Settings">Take a look</a> -->
+								</figcaption>
+							</figure>
+						</li>
+						<li class="cbp-so-section">
+							<figure class="cbp-so-side cbp-so-side-right">
+								<img src="img/1.png" alt="img01">
+								<figcaption>
+									<h3>Небольшой заголовок</h3>
+									<span>У нас работают грамотные специалисты, мы качественно воплощаем идеи в жизнь.</span>
+								</figcaption>
+							</figure>
+						</li>
+						<li class="cbp-so-section">
+							<figure class="cbp-so-side cbp-so-side-left">
+								<img src="img/2.png" alt="img02">
+								<figcaption>
+									<h3>Небольшой заголовок</h3>
+									<span>Мы идём до конца, пока наши решения не начнут приносить Вам прибыль.</span>
+								</figcaption>
+							</figure>
+						</li>
+						<li class="cbp-so-section">
+							<figure class="cbp-so-side cbp-so-side-right">
+								<img src="img/5.png" alt="img05">
+								<figcaption>
+									<h3>Небольшой заголовок</h3>
+									<span>Наша задача: «Сделать Ваш бизнес эффективным и прибыльным»</span>
+								</figcaption>
+							</figure>
+						</li>
+						<li class="cbp-so-section">
+							<figure class="cbp-so-side cbp-so-side-left">
+								<img src="img/3.png" alt="img03">
+								<figcaption>
+									<h3>Небольшой заголовок</h3>
+									<span>Нам нравится работать, а не просто говорить.</span>
+								</figcaption>
+							</figure>
+						</li>
+						<li class="cbp-so-section">
+							<figure class="cbp-so-side cbp-so-side-right">
+								<img src="img/6.png" alt="img06">
+								<figcaption>
+									<h3>Небольшой заголовок</h3>
+									<span>Мы всегда на связи и поддерживаем наших клиентов даже после окончания проекта.</span>
+									
+								</figcaption>
+							</figure>
+						</li>
+					</ul>
 				</section>
 			</div>
 				
-			<div class="content_stl2 content_stl">
+			<div class="content_stl2 content_stl float_clear">
 				<section class="container">
-					<h2></h2>
+					<h2 class="white">Нам доверяют!</h2>
+					<div class="clients">
+						<div class="clients1">
+							<a href="#"><img src="img/clients/clients.jpg" alt="clients"></a>
+							<div>
+								<h3>Name of Clients</h3>
+								<p>Somthing little description ,what to do this clients</p>
+							</div>
+						</div>
+						<div class="clients2">
+							<a href="#"><img src="img/clients/clients.jpg" alt="clients"></a>
+							<div>
+								<h3>Name of Clients</h3>
+								<p>Somthing little description ,what to do this clients</p>
+							</div>
+						</div>
+						<div class="clients3">
+							<a href="#"><img src="img/clients/clients.jpg" alt="clients"></a>
+							<div>
+								<h3>Name of Clients</h3>
+								<p>Somthing little description ,what to do this clients</p>
+							</div>
+						</div>
+						<div class="clients4">
+							<a href="#"><img src="img/clients/clients.jpg" alt="clients"></a>
+							<div>
+								<h3>Name of Clients</h3>
+								<p>Somthing little description ,what to do this clients</p>
+							</div>
+						</div>
+						<div class="clients5">
+							<a href="#"><img src="img/clients/clients.jpg" alt="clients"></a>
+							<div>
+								<h3>Name of Clients</h3>
+								<p>Somthing little description ,what to do this clients</p>
+							</div>
+						</div>
+						<div class="clients6">
+							<a href="#"><img src="img/clients/clients.jpg" alt="clients"></a>
+							<div>
+								<h3>Name of Clients</h3>
+								<p>Somthing little description ,what to do this clients</p>
+							</div>
+						</div>
+						<div class="clients7">
+							<a href="#"><img src="img/clients/clients.jpg" alt="clients"></a>
+							<div>
+								<h3>Name of Clients</h3>
+								<p>Somthing little description ,what to do this clients</p>
+							</div>
+						</div>
+						<div class="clients8">
+							<a href="#"><img src="img/clients/clients.jpg" alt="clients"></a>
+							<div>
+								<h3>Name of Clients</h3>
+								<p>Somthing little description ,what to do this clients</p>
+							</div>
+						</div>
+					</div>
+				</section>
+			</div>
+
+			<div class="content_stl3 content_stl float_clear">
+				<section class="container">
+					text <br>
+					text <br>
+					text <br>
+					text <br>
+					text <br>
+					text <br>
+					text <br>
+					text <br>
+					text <br>
+					text <br>
+					text <br>
+					text <br>
+					text <br>
+					text <br>
+					text <br>
+					text <br>
+					text <br>
+					text <br>
+					text <br>
 				</section>
 			</div>
 
 		</section>
 
-		<footer>
+		<footer class="float_clear">
+
 			<section class="container">
-				
+				<div class="copyring">&#169; Sotbi corp. (2007-2014) <span class="by">by</span> <cite>FunBek</cite></div>
+				<div class="contacts">
+					<p class="telephone_number">Тел: +7 (812) 6000-512</p>
+					<p class="mail_sotbi cl-effect-2"><a href="#"><span data-hover="care@sotbi-it.ru">care@sotbi-it.ru</span></a></p>
+				</div>
 			</section>
 		</footer>
 	</div>
@@ -188,12 +291,16 @@
 	<script src="js/jquery.js"></script>
 	<script src="js/jquery.sticky.js"></script>
 	<script src="js/flatshadow.min.js"></script>
-	<script src="js/realshadow-min.js"></script>
-	<script type="text/javascript" src="js/jquery.ba-cond.min.js"></script>
-	<script type="text/javascript" src="js/jquery.slitslider.js"></script>
-	<script src="js/jquery.sticky.js"></script>
+	<script src="js/jquery.ba-cond.min.js"></script>
+	<script src="js/jquery.slitslider.js"></script>
 	<script src="js/toucheffects.js"></script>
+	<script src="js/classie.js"></script>
+	<script src="js/cbpScroller.js"></script>
+	<script src="js/jquery.label_better.min.js"></script>
+	<script src="js/jquery.validate.min.js"></script>
 	<script src="js/script.js"></script>
 
+
+	
 </body>
 </html>
