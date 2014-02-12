@@ -2,7 +2,6 @@
    v2.0 | 20110126
    License: none (public domain)
 */
-
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -58,10 +57,7 @@ button::-moz-focus-inner,
 *:focus {
 	outline: none;
 }
-
-
 /*end reset*/
-
 
 /* style start */
 
@@ -107,15 +103,9 @@ hgroup{
 }
 
 /*header*/
-header{
-	background: rgb(70,198,143); /* Old browsers */
-	background: -moz-linear-gradient(top,  rgba(70,198,143,1) 0%, rgba(55,164,117,1) 100%); /* FF3.6+ */
-	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(70,198,143,1)), color-stop(100%,rgba(55,164,117,1))); /* Chrome,Safari4+ */
-	background: -webkit-linear-gradient(top,  rgba(70,198,143,1) 0%,rgba(55,164,117,1) 100%); /* Chrome10+,Safari5.1+ */
-	background: -o-linear-gradient(top,  rgba(70,198,143,1) 0%,rgba(55,164,117,1) 100%); /* Opera 11.10+ */
-	background: -ms-linear-gradient(top,  rgba(70,198,143,1) 0%,rgba(55,164,117,1) 100%); /* IE10+ */
-	background: linear-gradient(to bottom,  rgba(70,198,143,1) 0%,rgba(55,164,117,1) 100%); /* W3C */
-	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#46c68f', endColorstr='#37a475',GradientType=0 ); /* IE6-9 */
+.parallax{
+	background: rgb(70,198,143) url(../img/Bg_parallax_one.png) no-repeat;
+	background-size: 100%;
 }
 header p{
 	margin-bottom: 40px;
@@ -217,6 +207,7 @@ label.error{
 
 h2{
 	font: normal 50px bold 'PT Sans Narrow', Arial, sans-serif;
+	margin-bottom: 20px;
 }
 
 .socila_header{
@@ -289,8 +280,9 @@ h2{
 .content_stl1, .content_stl3{
 	background: #049e9c url(../img/pattern2.png);
 	border-bottom: 4px solid #006e6c;
+	padding: 30px 0;
 }
-#cbp-so-scroller li:nth-child(1) .cbp-so-side{
+/*#cbp-so-scroller li:nth-child(1) .cbp-so-side{
 	background: #d0d2d3;
 }
 #cbp-so-scroller li:nth-child(2) .cbp-so-side{
@@ -307,7 +299,7 @@ h2{
 }
 #cbp-so-scroller li:nth-child(6) .cbp-so-side{
 	background: #f8aeaa;
-}
+}*/
 .cbp-so-side img{
 	margin: 0 auto;
 }
@@ -315,6 +307,20 @@ h2{
 .content_stl2{
 	background: #3c3e3d url(../img/pattern3.png);
 	border-bottom: 4px solid #2c2c2c;
+}
+.content_stl2 .clients > div img{
+	width: 100%;
+	-webkit-transition: all 0.3s ease-in-out;
+	-moz-transition: all 0.3s ease-in-out;
+	-o-transition: all 0.3s ease-in-out;
+	-ms-transition: all 0.3s ease-in-out;
+}
+.scale_modernzr{
+    -moz-transform: scale(1.2) translateY(-20px); /* Для Firefox */
+    -ms-transform: scale(1.2) translateY(-20px); /* Для IE */
+    -webkit-transform: scale(1.2) translateY(-20px); /* Для Safari, Chrome, iOS */
+    -o-transform: scale(1.2) translateY(-20px); /* Для Opera */
+    transform: scale(1.2) translateY(-20px);
 }
 
 .content_stl2 .white{
@@ -351,6 +357,48 @@ h2{
 	padding-top: 10px;
 	font-size: 20px;
 }
+
+.content_stl3 .our_servise > div{
+	font-size: 22px;
+	line-height: 30px;
+	text-align: justify;
+	margin-bottom: 40px;
+	border-bottom: 2px solid black;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px; 
+	-khtml-border-radius: 5px; 
+	border-radius: 5px; 
+}
+.content_stl3 .our_servise > div > p{
+	margin-bottom: 15px;
+	text-indent: 20px;
+}
+.content_stl3 ul > li{
+	width: 90.6666666666666%;
+	float: none;
+	margin: 2.333333333333333%;
+	padding: 2.333333333333333%;
+	color: #d8dee3;
+	background: #383f45;
+	background: rgba(56,63,69,.7);
+	-moz-border-radius: 4px;
+	-webkit-border-radius: 4px; 
+	-khtml-border-radius: 4px; 
+	border-radius: 4px;
+	margin-bottom: 20px;
+}
+.content_stl3 ul > li h3{
+	font-size: 20px;
+	font-weight: bold;
+	margin-bottom: 10px;
+}
+.content_stl3 ul > li p{
+	font-size: 20px;
+	line-height: 24px;
+	text-align: justify;
+}
+
+
 /*footer*/
 footer{
 	background: #383f45;
@@ -695,6 +743,11 @@ footer .mail_sotbi a{
 		padding-bottom: 20px;
 		padding-top: 20px;
 	}
+	.content_stl3 ul > li{
+		float: left;
+		width: 24%;
+		margin-bottom: 0;
+	}
 }
 
 
@@ -716,21 +769,6 @@ footer .mail_sotbi a{
 		width: 22%;
 		padding: 1.5%;
 	}
-	.content_stl2 .clients > div img{
-		width: 100%;
-		-webkit-transition: all 0.3s ease-in-out;
-		-moz-transition: all 0.3s ease-in-out;
-		-o-transition: all 0.3s ease-in-out;
-		-ms-transition: all 0.3s ease-in-out;
-	}
-	.content_stl2 .clients > div img:hover{
-	    -moz-transform: scale(1.2) translateY(-20px); /* Для Firefox */
-	    -ms-transform: scale(1.2) translateY(-20px); /* Для IE */
-	    -webkit-transform: scale(1.2) translateY(-20px); /* Для Safari, Chrome, iOS */
-	    -o-transform: scale(1.2) translateY(-20px); /* Для Opera */
-	    transform: scale(1.2) translateY(-20px);
-	}
-
 	.content_stl2 .clients > div > div{
 		padding: 10px;
 		background: #dedede;

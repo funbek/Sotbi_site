@@ -21,22 +21,37 @@
     <!-- start content -->
 	<div id="page">
 		<header>
-			<section id="header" class="container">
-				<hgroup>
-					<h1>SOTBI</h1>
-					<h2 class="sub_name">Интернет решения</h2>
-				</hgroup>
-				<p>
-					Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perspiciatis, totam, suscipit, cum quidem illo eaque necessitatibus quae fugit earum inventore illum corporis modi ab nulla odio repudiandae exercitationem accusantium neque.
-				</p>
-
-				<form action="#" id="contactform" method="post" class="formaction" name="getcontact">
-					<input class="label_better" placeholder="Your name" data-position="left" data-new-placeholder="Your name:" type="text" name="name">
-					<input class="label_better" placeholder="Email" data-position="left" data-new-placeholder="Email:" type="email" name="email">
-					<input class="label_better" placeholder="Your phone" data-position="left" data-new-placeholder="Your phone:" type="tel" name="phone">
-					<input class="submit_bth" type="submit" value="Заказать звонок" name="submit">
-				</form>
-			</section>
+			<div class="parallax">
+				<section id="header" class="container">
+					<hgroup>
+						<h1>SOTBI</h1>
+						<h2 class="sub_name">Интернет решения</h2>
+					</hgroup>
+					<p>
+						Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perspiciatis, totam, suscipit, cum quidem illo eaque necessitatibus quae fugit earum inventore illum corporis modi ab nulla odio repudiandae exercitationem accusantium neque.
+					</p>
+<?php 
+// если была нажата кнопка "Отправить" 
+if($_POST['submit']) { 
+        // $_POST['title'] содержит данные из поля "Тема", trim() - убираем все лишние пробелы и переносы строк, htmlspecialchars() - преобразует специальные символы в HTML сущности, будем считать для того, чтобы простейшие попытки взломать наш сайт обломались, ну и  substr($_POST['title'], 0, 1000) - урезаем текст до 1000 символов. Для переменной $_POST['mess'] все аналогично 
+        $name = substr(htmlspecialchars(trim($_POST['name'])), 0, 100); 
+        $email =  substr(htmlspecialchars(trim($_POST['email'])), 0, 100);
+        $tel =  substr(htmlspecialchars(trim($_POST['tel'])), 0, 100);
+        // $to - кому отправляем 
+        $to = 'web_tec@mail.ru';  
+        // функция, которая отправляет наше письмо. 
+        mail($to, $name, $tel, 'From:'.$email); 
+        echo 'Спасибо! Ваше письмо отправлено.'; 
+} 
+?> 
+					<form action="" method="POST" id="contactform" class="formaction" name="getcontact">
+						<input class="label_better" placeholder="Your name" data-position="left" data-new-placeholder="Your name:" type="text" name="name">
+						<input class="label_better" placeholder="Email" data-position="left" data-new-placeholder="Email:" type="email" name="email">
+						<input class="label_better" placeholder="Your phone" data-position="left" data-new-placeholder="Your phone:" type="tel" name="phone">
+						<input class="submit_bth" type="submit" value="Заказать звонок" name="submit">
+					</form>
+				</section>
+			</div>
 
 			<div id="sticker" class="menu float_clear">
 				<div class="container">
@@ -99,7 +114,6 @@
 							<blockquote><p>Приятно когда результат видно сразу, а когда результат превосходит все ожидания еще приятнее...</p><cite>FunBek</cite></blockquote>
 						</div>
 					</div>
-					
 
 				</div><!-- /sl-slider -->
 				<nav id="nav-arrows" class="nav-arrows">
@@ -111,13 +125,10 @@
 					<span class="nav-dot-current"></span>
 					<span></span>
 					<span></span>
-
 				</nav>
 
 			</div><!-- /slider-wrapper -->
 			</div>
-
-			
 
 			<div class="content_stl1 content_stl">
 				<section class="container">
@@ -248,26 +259,36 @@
 			</div>
 
 			<div class="content_stl3 content_stl float_clear">
-				<section class="container">
-					text <br>
-					text <br>
-					text <br>
-					text <br>
-					text <br>
-					text <br>
-					text <br>
-					text <br>
-					text <br>
-					text <br>
-					text <br>
-					text <br>
-					text <br>
-					text <br>
-					text <br>
-					text <br>
-					text <br>
-					text <br>
-					text <br>
+				<section class="container our_servise">
+					<h2>Что мы предлагаем</h2>
+						<div>
+							<p>
+								Lorem ipsum dolor sit amet, consectetur adipisicing elit. Numquam, ex dignissimos aut vero quaerat ea labore dolores natus nemo fugit accusamus quos asperiores harum aspernatur magni! Quos, illum ea facere deserunt nulla perspiciatis eaque totam accusamus quia rerum iusto vitae repellat illo asperiores reprehenderit dolorem vel
+							</p> 
+							<p>
+								Voluptatibus neque necessitatibus in modi natus quo officiis doloremque alias eius temporibus veniam odit expedita voluptatum saepe eos aperiam atque optio similique ipsam quas fugit voluptates debitis tempore. Doloribus, sed, accusamus, facilis quidem vitae quam illum consequatur maxime error asperiores nulla tenetur adipisci! Itaque quisquam molestiae perspiciatis repellat quod vel soluta odit vero laudantium!
+							</p>
+						</div>
+						<ul id="cbp-so-scroller" class="cbp-so-scroller">
+							<li class="cbp-so-section">
+								<article class="cbp-so-side cbp-so-side-left">
+									<h3>Lorem ipsum dolor sit amet Eius, omnis omnis.</h3>
+									<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laboriosam, vitae, voluptates, numquam provident nihil aperiam atque magni non dignissimos magnam nam porro sequi suscipit libero recusandae optio rerum iure soluta.</p>
+								</article>
+							</li>
+							<li class="cbp-so-section">
+								<article class="cbp-so-side cbp-so-side-left">
+									<h3>Eius, omnis facilis dignissimos perferendis.</h3>
+									<p>Autem, animi, quod, tenetur facilis impedit beatae quasi nisi est mollitia dignissimos sunt expedita amet ex architecto natus ipsum illo ad quibusdam sit aliquam laborum assumenda ipsam voluptatibus soluta blanditiis.</p>
+								</article>
+							</li>
+							<li class="cbp-so-section">
+								<article class="cbp-so-side cbp-so-side-rifght">
+									<h3>Optio consequuntur nihil consequatur architecto.</h3>
+									<p>Cum, quaerat, fugit, pariatur, enim dolorum molestias nostrum minus reiciendis harum labore perferendis iste possimus esse voluptatem voluptatibus hic ullam corporis molestiae non repellendus nobis alias libero doloremque tempore quas.</p>
+								</article>
+							</li>
+						</ul>
 				</section>
 			</div>
 

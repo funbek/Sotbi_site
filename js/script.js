@@ -66,16 +66,17 @@ new cbpScroller( document.getElementById( 'cbp-so-scroller' ) );
         Page.init();
 
 
-
-
-
         // modernizr check
         
-        // if (Modernizr.touch) {   
-        //     alert('Touch Screen');  
-        // } else {
-        //     $('<link rel="stylesheet" type="text/css" href="css/styles.css" />').appendTo('head')
-        // }
+        if (Modernizr.touch) {   
+            alert('Touch Screen');  
+        } else {
+            $('.content_stl2 .clients > div img').hover(function(){
+              $(this).addClass('scale_modernzr');
+            },function(){
+              $(this).removeClass('scale_modernzr');
+            });
+        }
 
 
       });
