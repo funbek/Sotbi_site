@@ -1,8 +1,15 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<meta charset="utf-8">
+	<meta charset="UTF-8">
+	<meta http-equiv="Content-Language" content="ru">
+	<meta name="author" content="Denis Radchenko">
+	<meta name="description" content="SEO, создание сайта, скрытая реклама, раскрутка, оптимизация, наполнение, продвижение">
+	<meta name="keywords" content="SEO, создание сайта, скрытая реклама, раскрутка, оптимизация, наполнение, продвижение">
+
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Sotbi - Интернет решения</title>
+	<link rel="icon" href="favicon.jpg">
 	<title>Sotbi</title>
 	<link rel="stylesheet" type="text/css" href="css/styles.css" />
 	<link href='http://fonts.googleapis.com/css?family=PT+Sans+Narrow&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
@@ -26,24 +33,22 @@
 					<hgroup>
 						<h1>SOTBI</h1>
 						<h2 class="sub_name">Интернет решения</h2>
+						<div class="title_line_black"></div>
 					</hgroup>
 					<p>
 						Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perspiciatis, totam, suscipit, cum quidem illo eaque necessitatibus quae fugit earum inventore illum corporis modi ab nulla odio repudiandae exercitationem accusantium neque.
 					</p>
-<?php 
-// если была нажата кнопка "Отправить" 
-if($_POST['submit']) { 
-        // $_POST['title'] содержит данные из поля "Тема", trim() - убираем все лишние пробелы и переносы строк, htmlspecialchars() - преобразует специальные символы в HTML сущности, будем считать для того, чтобы простейшие попытки взломать наш сайт обломались, ну и  substr($_POST['title'], 0, 1000) - урезаем текст до 1000 символов. Для переменной $_POST['mess'] все аналогично 
-        $name = substr(htmlspecialchars(trim($_POST['name'])), 0, 100); 
-        $email =  substr(htmlspecialchars(trim($_POST['email'])), 0, 100);
-        $tel =  substr(htmlspecialchars(trim($_POST['tel'])), 0, 100);
-        // $to - кому отправляем 
-        $to = 'web_tec@mail.ru';  
-        // функция, которая отправляет наше письмо. 
-        mail($to, $name, $tel, 'From:'.$email); 
-        echo 'Спасибо! Ваше письмо отправлено.'; 
-} 
-?> 
+					<?php 
+					// если была нажата кнопка "Отправить"
+					if($_POST['submit']) {
+					        $name = substr(htmlspecialchars(trim($_POST['name'])), 0, 100);
+					        $email = substr(htmlspecialchars(trim($_POST['email'])), 0, 100);
+					        $tel = substr(htmlspecialchars(trim($_POST['tel'])), 0, 100);
+					        $to = 'web_tec@mail.ru';
+					        mail($to, $name, $tel, 'From:'.$email);
+					        echo 'Спасибо! Ваше письмо отправлено.';
+					}
+					?>
 					<form action="" method="POST" id="contactform" class="formaction" name="getcontact">
 						<input class="label_better" placeholder="Your name" data-position="left" data-new-placeholder="Your name:" type="text" name="name">
 						<input class="label_better" placeholder="Email" data-position="left" data-new-placeholder="Email:" type="email" name="email">
@@ -70,13 +75,12 @@ if($_POST['submit']) {
 							<option value="##">link</option>
 							<option value="##">link</option>
 							<option value="##">link</option>
-							<option value="##">link</option>
 						</select>
 					</nav>
 					<div class="socila_header mobile">
-						<a data-color="#3b5998" class="facebook flat-icon" href="#">f</a>
-						<a data-color="#2B587A" class="vk flat-icon" href="#">vk</a>
-						<a data-color="#0084b4" class="twitter flat-icon" href="#">tw</a>
+						<a class="facebook" href="#">f</a>
+						<a class="vk" href="#">vk</a>
+						<a class="twitter" href="#">tw</a>
 					</div>
 				</div>
 
@@ -133,6 +137,7 @@ if($_POST['submit']) {
 			<div class="content_stl1 content_stl">
 				<section class="container">
 					<h2>Меньше слов больше смысла</h2>
+					<div class="title_line_black"></div>
 					<ul id="cbp-so-scroller" class="grid cs-style-3 cbp-so-scroller">
 						<li class="cbp-so-section">
 							<figure class="cbp-so-side cbp-so-side-left">
@@ -197,6 +202,7 @@ if($_POST['submit']) {
 			<div class="content_stl2 content_stl float_clear">
 				<section class="container">
 					<h2 class="white">Нам доверяют!</h2>
+					<div class="title_line"></div>
 					<div class="clients">
 						<div class="clients1">
 							<a href="#"><img src="img/clients/clients.jpg" alt="clients"></a>
@@ -261,6 +267,7 @@ if($_POST['submit']) {
 			<div class="content_stl3 content_stl float_clear">
 				<section class="container our_servise">
 					<h2>Что мы предлагаем</h2>
+					<div class="title_line_black"></div>
 						<div>
 							<p>
 								Lorem ipsum dolor sit amet, consectetur adipisicing elit. Numquam, ex dignissimos aut vero quaerat ea labore dolores natus nemo fugit accusamus quos asperiores harum aspernatur magni! Quos, illum ea facere deserunt nulla perspiciatis eaque totam accusamus quia rerum iusto vitae repellat illo asperiores reprehenderit dolorem vel
@@ -269,26 +276,84 @@ if($_POST['submit']) {
 								Voluptatibus neque necessitatibus in modi natus quo officiis doloremque alias eius temporibus veniam odit expedita voluptatum saepe eos aperiam atque optio similique ipsam quas fugit voluptates debitis tempore. Doloribus, sed, accusamus, facilis quidem vitae quam illum consequatur maxime error asperiores nulla tenetur adipisci! Itaque quisquam molestiae perspiciatis repellat quod vel soluta odit vero laudantium!
 							</p>
 						</div>
-						<ul id="cbp-so-scroller" class="cbp-so-scroller">
+						<ul id="cbp-so-scroller_one" class="cbp-so-scroller">
 							<li class="cbp-so-section">
-								<article class="cbp-so-side cbp-so-side-left">
+								<section class="cbp-so-side cbp-so-side-left">
 									<h3>Lorem ipsum dolor sit amet Eius, omnis omnis.</h3>
 									<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laboriosam, vitae, voluptates, numquam provident nihil aperiam atque magni non dignissimos magnam nam porro sequi suscipit libero recusandae optio rerum iure soluta.</p>
-								</article>
+								</section>
 							</li>
 							<li class="cbp-so-section">
-								<article class="cbp-so-side cbp-so-side-left">
+								<section class="cbp-so-side cbp-so-side-right">
 									<h3>Eius, omnis facilis dignissimos perferendis.</h3>
-									<p>Autem, animi, quod, tenetur facilis impedit beatae quasi nisi est mollitia dignissimos sunt expedita amet ex architecto natus ipsum illo ad quibusdam sit aliquam laborum assumenda ipsam voluptatibus soluta blanditiis.</p>
-								</article>
+									<p>Autem, animi, quod, tenetur facilis impedit beatae quasi nisi est mollitia dignissimos sunt expedita amet ex architecto natus ipsum illo ad quibusdam sit aliquam laborum assumenda ipsam voluptatibus soluta blanditiis. non repellendus nobis alias libero doloremque tempore quas.</p>
+								</section>
 							</li>
 							<li class="cbp-so-section">
-								<article class="cbp-so-side cbp-so-side-rifght">
+								<section class="cbp-so-side cbp-so-side-left">
 									<h3>Optio consequuntur nihil consequatur architecto.</h3>
-									<p>Cum, quaerat, fugit, pariatur, enim dolorum molestias nostrum minus reiciendis harum labore perferendis iste possimus esse voluptatem voluptatibus hic ullam corporis molestiae non repellendus nobis alias libero doloremque tempore quas.</p>
-								</article>
+									<p>Cum, quaerat, fugit, pariatur, enim dolorum molestias nostrum minus reiciendis harum labore perferendis iste possimus esse voluptatem voluptatibus hic ullam corporis molestiae</p>
+								</section>
 							</li>
 						</ul>
+				</section>
+			</div>
+
+			<div class="content_stl4 content_stl float_clear">
+				<section class="container">
+					<h2>О нас</h2>
+					<div class="title_line"></div>
+					<div class="about">
+						<div>
+							<p class="about_title">Сейчас ...</p>
+							<p class="about_text">
+								Каждый день, начиная с 2007 года, мы получаем новый опыт. Это позволяет нам успешно решать задачи любого уровня. Мы превосходно находим общий язык, как с коммерческими компаниями, так и с государственными организациями.
+							</p>
+						</div>
+						<div>
+							<p class="about_title">Факт ...</p>
+							<p class="about_text">
+								Многолетний опыт работы с Заказчиками из медицинской сферы позволяют нам быстро адаптироваться в любых, даже самых сложных отраслях. Мы отлично ориентируемся в медицине, спорте, beauty индустрии,  туризме и пр.
+							</p>
+						</div>
+						<div>
+							<p class="about_title">Точка ...</p>
+							<p class="about_text">
+								Мы объединили профессионализм специалистов и современные инструменты интернет-индустрии. Это позволяет нам детально прорабатывать все особенности проектов, предлагать действенные решения и достигать поставленных целей.
+							</p>
+						</div>
+
+
+						<div class="reason">
+							<p>5 причин работать именно с нами:</p>
+							<ul>
+								<li>one</li>
+								<li>one</li>
+								<li>one</li>
+								<li>one</li>
+								<li>one</li>
+							</ul>
+						</div>
+					</div>
+				</section>
+			</div>
+
+			<div class="content_stl5 content_stl float_clear">
+				<section class="container">
+					<h2>form</h2>
+					<div class="title_line_black"></div>
+					<div>
+						this is form <br>
+						this is form <br>
+						this is form <br>
+						this is form <br>
+						this is form <br>
+						this is form <br>
+						this is form <br>
+						this is form <br>
+						this is form <br>
+						this is form <br>
+					</div>
 				</section>
 			</div>
 
@@ -307,21 +372,16 @@ if($_POST['submit']) {
 	</div>
 
 
-
 	<!-- script -->
 	<script src="js/jquery.js"></script>
 	<script src="js/jquery.sticky.js"></script>
-	<script src="js/flatshadow.min.js"></script>
 	<script src="js/jquery.ba-cond.min.js"></script>
-	<script src="js/jquery.slitslider.js"></script>
 	<script src="js/toucheffects.js"></script>
 	<script src="js/classie.js"></script>
 	<script src="js/cbpScroller.js"></script>
 	<script src="js/jquery.label_better.min.js"></script>
-	<script src="js/jquery.validate.min.js"></script>
+	<script src="js/jquery.slitslider.js"></script>
 	<script src="js/script.js"></script>
 
-
-	
 </body>
 </html>
