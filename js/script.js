@@ -16,8 +16,6 @@ $("input.label_better").label_better({
   hidePlaceholderOnFocus: true // The default placeholder text will hide on focus
 });
 
-
-
 // slider
 var Page = (function() {
   var $navArrows = $( '#nav-arrows' ),
@@ -57,7 +55,6 @@ var Page = (function() {
 })();
 Page.init();
 
-
 // modernizr check
 
 if (Modernizr.touch) {   
@@ -70,6 +67,18 @@ if (Modernizr.touch) {
     });
 }
 
+// плавная прокрутка
+$('a[href^="#"]').bind('click.smoothscroll',function (e) {
+ e.preventDefault();
+ 
+var target = this.hash,
+ $target = $(target);
+ 
+$('html, body').stop().animate({
+ 'scrollTop': $target.offset().top
+ }, 500, 'swing', function () {
+ window.location.hash = target;
+ });
+ });
 
       });
-

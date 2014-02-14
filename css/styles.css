@@ -112,67 +112,13 @@ header p{
 h1{
 	text-transform: uppercase;
 	font: normal 65px bold 'PT Sans Narrow', Arial, sans-serif;
+	font-size: 65px;
 	text-shadow: 2px 2px 5px rgba(0,0,0,.7);
 	line-height: 70px;
 }
 h2.sub_name{
 	font: normal 18px bold 'PT Sans Narrow', Arial, sans-serif;
-}
-
-#contactform input{
-	border: none;
-	display: block;
-	padding: 10px 20px;
-	-moz-border-radius: 2px;
-	-webkit-border-radius: 2px; 
-	-khtml-border-radius: 2px; 
-	border-radius: 2px;
-}
-input.label_better{
-	font: normal 20px bold 'PT Sans Narrow', Arial, sans-serif;
-	margin: 0 auto;
-	margin-top: 30px;
-}
-#contactform div.lb_label{
-	font: normal 20px bold 'PT Sans Narrow', Arial, sans-serif;
-}
-#contactform div.left{
-	left: -110px !important;
-	top: -37px !important;
-}
-label.error{
-	position: absolute;
-	left: 115px;
-	width: 240px;
-	top: -30px;
-	color: #f00;
-	text-align: left;
-}
-
-#contactform .submit_bth{
-	display: block;
-	margin: 0 auto;
-	margin-top: 20px;
-	width: 250px;
-	font: normal 25px bold 'PT Sans Narrow', Arial, sans-serif;
-
-	background: rgb(220,236,87); /* Old browsers */
-	background: -moz-linear-gradient(top,  rgba(220,236,87,1) 0%, rgba(171,183,73,1) 100%); /* FF3.6+ */
-	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(220,236,87,1)), color-stop(100%,rgba(171,183,73,1))); /* Chrome,Safari4+ */
-	background: -webkit-linear-gradient(top,  rgba(220,236,87,1) 0%,rgba(171,183,73,1) 100%); /* Chrome10+,Safari5.1+ */
-	background: -o-linear-gradient(top,  rgba(220,236,87,1) 0%,rgba(171,183,73,1) 100%); /* Opera 11.10+ */
-	background: -ms-linear-gradient(top,  rgba(220,236,87,1) 0%,rgba(171,183,73,1) 100%); /* IE10+ */
-	background: linear-gradient(to bottom,  rgba(220,236,87,1) 0%,rgba(171,183,73,1) 100%); /* W3C */
-	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#dcec57', endColorstr='#abb749',GradientType=0 ); /* IE6-9 */
-}
-#contactform .submit_bth:hover{
-	cursor: pointer;
-	border-bottom: 4px solid rgb(180, 194, 47, )
-}
-#contactform .submit_bth:active{
-	-webkit-box-shadow: inset 2px 2px 3px #000, inset -2px 0 3px #000;
-	-moz-box-shadow: inset 2px 2px 3px #000, inset -2px 0 3px #000;
-	box-shadow: inset 2px 2px 3px #000, inset -2px 0 3px #000;
+	font-size: 18px;
 }
 
 /*menu*/
@@ -230,20 +176,29 @@ h2{
 	border-radius: 3px; 
 	color: #ededed !important;
 	text-decoration: none;
-	-webkit-box-shadow: 4px 4px 10px #000;
-	-moz-box-shadow: 4px 4px 10px #000;
-	box-shadow: 4px 4px 10px #000;
+
 	text-shadow: 2px 2px 5px #000;
+	-webkit-transition: all 0.7s ease-in-out;
+	-moz-transition: all 0.7s ease-in-out;
+	-o-transition: all 0.7s ease-in-out;
+	-ms-transition: all 0.7s ease-in-out;
+}
+.socila_header > a:hover{
+    -moz-transform: rotate(360deg); /* Для Firefox */
+    -ms-transform: rotate(360deg); /* Для IE */
+    -webkit-transform: rotate(360deg); /* Для Safari, Chrome, iOS */
+    -o-transform: rotate(360deg); /* Для Opera */
+    transform: rotate(360deg);
 }
 
 .facebook{
-	background: #34c;
+	background: #3b5998;
 }
 .vk{
-	background: #349;
+	background: #2b587a;
 }
 .socila_header >a.twitter{
-	background: #346;
+	background: #3a92c8;
 	margin-right: 0;
 }
 
@@ -286,7 +241,7 @@ h2{
 .content_stl1, .content_stl3, .content_stl5{
 	background: #049e9c url(../img/pattern2.png);
 	border-bottom: 4px solid #006e6c;
-	padding: 30px 0;
+	padding: 80px 0;
 }
 
 .cbp-so-side img{
@@ -296,7 +251,7 @@ h2{
 .content_stl2, .content_stl4{
 	background: #3c3e3d url(../img/pattern3.png);
 	border-bottom: 4px solid #2c2c2c;
-	padding: 30px 0;
+	padding: 80px 0;
 	color: #e8eef3;
 	text-align: justify;
 }
@@ -393,20 +348,126 @@ h2{
 .content_stl4 .about{
 	text-align: justify;
 }
-.content_stl4 .about > div{
-	width: 24%;
-	float: left;
-	margin: 2.333333333333333%;
-	padding: 2.333333333333333%;
+.content_stl4 .about .about_content{
+	width: 94%;
+	margin: 3%;
+	float: none;
+	margin-top: 0;
+	padding-top: 0;
 }
 .content_stl4 .about_title{
 	font-size: 30px;
 	margin: 20px 0;
+	color: #ed4e6e;
 }
 .content_stl4 .about_text{
 	font-size: 18px;
 	line-height: 22px;
+}
 
+.about h3{
+	font-size: 24px;
+	margin-bottom: 20px;
+	-moz-border-radius: 4px;
+	-webkit-border-radius: 4px; 
+	-khtml-border-radius: 4px; 
+	border-radius: 4px;
+	padding: 15px;
+	background: #222;
+	text-align: center;
+}
+.reason span{
+	text-transform: uppercase;
+	font-size: 30px
+}
+.about .reason ol li{
+	line-height: 25px;
+	font-size: 20px;
+	list-style: decimal;
+	list-style-position: inside;
+	color: #ed4e6e;
+}
+.reason ol h4{
+	font-size: 25px;
+	margin: 15px 0;
+}
+.reason ol p{
+	text-indent: 15px;
+	color: #fff;
+}
+
+/*location*/
+#contactform{
+	width: 100%;
+	float: none;
+	margin-left: 0;
+}
+#contactform input{
+	border: none;
+	display: block;
+	padding: 10px 20px;
+	-moz-border-radius: 2px;
+	-webkit-border-radius: 2px; 
+	-khtml-border-radius: 2px; 
+	border-radius: 2px;
+}
+#contactform input.submit_btn{
+	padding: 10px 3%;
+}
+input.label_better{
+	font: normal 20px bold 'PT Sans Narrow', Arial, sans-serif;
+	margin: 0 auto;
+	margin-top: 30px;
+}
+input.label_better[name="name"]{
+	margin-top: 70px;
+}
+#contactform div.lb_label{
+	font: normal 20px bold 'PT Sans Narrow', Arial, sans-serif;
+}
+#contactform div.left{
+	left: -110px !important;
+	top: -37px !important;
+}
+
+#contactform .submit_btn{
+	display: block;
+	margin: 0 auto;
+	margin-top: 20px;
+	width: 100%;
+	font: normal 25px bold 'PT Sans Narrow', Arial, sans-serif;
+
+	background: rgb(220,236,87);
+	border-bottom: 4px solid rgb(180,196,47);
+}
+#contactform .submit_btn:hover{
+	cursor: pointer;
+}
+#contactform .submit_btn:active{
+
+}
+
+.location{
+	width: 100%;
+	float: none;
+}
+.location h3{
+	font-size: 30px;
+	margin-bottom: 30px;
+	border-bottom: 1px solid #000;
+	padding-bottom: 20px;
+}
+.location h4{
+	font-size: 25px;
+	margin: 20px 0;
+	text-align: left;
+	font-weight: bold;
+}
+.location p{
+	font-size: 22px;
+	text-align: left;
+	text-indent: 15px;
+	line-height: 30px;
 }
 
 
@@ -643,15 +704,10 @@ footer .mail_sotbi a{
 	width: 96%;
 }
 
-/*style for touch device*/
-
-/*.touch_class{
-	opacity: 1;
-	-webkit-transform: translateY(0%);
-	-moz-transform: translateY(0%);
-	-ms-transform: translateY(0%);
-	transform: translateY(0%);
-}*/
+/*maps*/
+iframe{
+	width: 100%;
+}
 
 /* style end */
 
@@ -708,15 +764,9 @@ footer .mail_sotbi a{
 	.container{
 		width: 740px;
 		padding-bottom: 20px;
-		padding-top: 20px;
 	}
 
-	/*top*/
-	#contactform .submit_bth{
-		width: 400px;
-	}
-
-		/*menu*/
+	/*menu*/
 	#sticker .container{
 		padding: 0;
 	}
@@ -727,7 +777,7 @@ footer .mail_sotbi a{
 		display: block;
 		float: left;
 		line-height: 70px;
-		margin-left: 23px;
+		margin-left: 4px;
 	}
 	.no-touch .cs-style-3 figure:hover figcaption,.cs-style-3 figure.cs-hover figcaption{
 		width: 360px;
@@ -739,6 +789,20 @@ footer .mail_sotbi a{
 		width: 45%;
 		padding: 2.5%;
 	}
+	#contactform .submit_bth{
+		width: 400px;
+	}
+
+	.location, #contactform{
+		float: left;
+	}
+	.location{
+		width: 35%;
+	}
+	#contactform{
+		width: 60%;
+		margin-left: 5%;
+	}
 
 	footer .copyring{
 		line-height: 60px;
@@ -749,19 +813,30 @@ footer .mail_sotbi a{
 
 /*media screen*/
 @media all and (min-width: 980px){
+	.menu nav a{
+		margin-left: 36px;
+	}
 	.container{
 		width: 940px;
 		padding-bottom: 20px;
-		padding-top: 20px;
 	}
 	.parallax{
-		background: rgb(70,198,143) url(../img/Bg_parallax_one.png) no-repeat;
+		background: rgb(70,198,143) url(../img/bg_head.jpg) no-repeat center top fixed;
 		background-size: 100%;
 	}
 	.content_stl3 ul > li{
 		float: left;
 		width: 24%;
 		margin-bottom: 0;
+		height: 300px;
+	}
+	.content_stl4 .about .about_content{
+		width: 24%;
+		float: left;
+		margin: 2.333333333333333%;
+		padding: 2.333333333333333%;
+		margin-top: 0;
+		padding-top: 0;
 	}
 	.scale_modernzr{
 	    -moz-transform: scale(1.2) translateY(-20px); /* Для Firefox */
@@ -779,11 +854,9 @@ footer .mail_sotbi a{
 	.container{
 		width: 1170px;
 	}
-
 	/*menu*/
-
 	.menu nav a{
-		margin-left: 94px;
+		margin-left: 69px;
 	}
 	/*content*/
 	.content_stl2 .clients > div{
@@ -806,5 +879,4 @@ footer .mail_sotbi a{
 		font-size: 25px;
 		line-height: 69px;
 	}
-
 }

@@ -27,7 +27,7 @@
 
     <!-- start content -->
 	<div id="page">
-		<header>
+		<header id="home">
 			<div class="parallax">
 				<section id="header" class="container">
 					<hgroup>
@@ -38,23 +38,6 @@
 					<p>
 						Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perspiciatis, totam, suscipit, cum quidem illo eaque necessitatibus quae fugit earum inventore illum corporis modi ab nulla odio repudiandae exercitationem accusantium neque.
 					</p>
-					<?php 
-					// если была нажата кнопка "Отправить"
-					if($_POST['submit']) {
-					        $name = substr(htmlspecialchars(trim($_POST['name'])), 0, 100);
-					        $email = substr(htmlspecialchars(trim($_POST['email'])), 0, 100);
-					        $tel = substr(htmlspecialchars(trim($_POST['tel'])), 0, 100);
-					        $to = 'web_tec@mail.ru';
-					        mail($to, $name, $tel, 'From:'.$email);
-					        echo 'Спасибо! Ваше письмо отправлено.';
-					}
-					?>
-					<form action="" method="POST" id="contactform" class="formaction" name="getcontact">
-						<input class="label_better" placeholder="Your name" data-position="left" data-new-placeholder="Your name:" type="text" name="name">
-						<input class="label_better" placeholder="Email" data-position="left" data-new-placeholder="Email:" type="email" name="email">
-						<input class="label_better" placeholder="Your phone" data-position="left" data-new-placeholder="Your phone:" type="tel" name="phone">
-						<input class="submit_bth" type="submit" value="Заказать звонок" name="submit">
-					</form>
 				</section>
 			</div>
 
@@ -63,18 +46,20 @@
 					<a href="#" class="logo_img mobile"></a>
 					<nav>
 						<div class="wide_resolution">
-							<a class="cl-effect-1" href="#">link</a>
-							<a class="cl-effect-1" href="#">link</a>
-							<a class="cl-effect-1" href="#">link</a>
-							<a class="cl-effect-1" href="#">link</a>
-							<a class="cl-effect-1" href="#">link</a>
+							<a class="cl-effect-1" href="#home">Home</a>
+							<a class="cl-effect-1" href="#one">One</a>
+							<a class="cl-effect-1" href="#two">Two</a>
+							<a class="cl-effect-1" href="#three">Three</a>
+							<a class="cl-effect-1" href="#four">Four</a>
+							<a class="cl-effect-1" href="#five">Five</a>
 						</div>
 						<select class="mobile_resolution">
-							<option selected="selected" value="##">select menu</option>
-							<option value="##">link</option>
-							<option value="##">link</option>
-							<option value="##">link</option>
-							<option value="##">link</option>
+							<option selected="selected" value="#home">select menu</option>
+							<option onClick="location.href='#one'" value="#one">one</option>
+							<option value="#two">two</option>
+							<option value="#three">three</option>
+							<option value="#four">four</option>
+							<option value="#five">five</option>
 						</select>
 					</nav>
 					<div class="socila_header mobile">
@@ -134,7 +119,7 @@
 			</div><!-- /slider-wrapper -->
 			</div>
 
-			<div class="content_stl1 content_stl">
+			<div id="one" class="content_stl1 content_stl">
 				<section class="container">
 					<h2>Меньше слов больше смысла</h2>
 					<div class="title_line_black"></div>
@@ -199,7 +184,7 @@
 				</section>
 			</div>
 				
-			<div class="content_stl2 content_stl float_clear">
+			<div id="two" class="content_stl2 content_stl float_clear">
 				<section class="container">
 					<h2 class="white">Нам доверяют!</h2>
 					<div class="title_line"></div>
@@ -264,7 +249,7 @@
 				</section>
 			</div>
 
-			<div class="content_stl3 content_stl float_clear">
+			<div id="three" class="content_stl3 content_stl float_clear">
 				<section class="container our_servise">
 					<h2>Что мы предлагаем</h2>
 					<div class="title_line_black"></div>
@@ -299,66 +284,108 @@
 				</section>
 			</div>
 
-			<div class="content_stl4 content_stl float_clear">
+			<div id="four" class="content_stl4 content_stl float_clear">
 				<section class="container">
 					<h2>О нас</h2>
 					<div class="title_line"></div>
 					<div class="about">
-						<div>
-							<p class="about_title">Сейчас ...</p>
-							<p class="about_text">
-								Каждый день, начиная с 2007 года, мы получаем новый опыт. Это позволяет нам успешно решать задачи любого уровня. Мы превосходно находим общий язык, как с коммерческими компаниями, так и с государственными организациями.
-							</p>
-						</div>
-						<div>
-							<p class="about_title">Факт ...</p>
-							<p class="about_text">
-								Многолетний опыт работы с Заказчиками из медицинской сферы позволяют нам быстро адаптироваться в любых, даже самых сложных отраслях. Мы отлично ориентируемся в медицине, спорте, beauty индустрии,  туризме и пр.
-							</p>
-						</div>
-						<div>
-							<p class="about_title">Точка ...</p>
-							<p class="about_text">
-								Мы объединили профессионализм специалистов и современные инструменты интернет-индустрии. Это позволяет нам детально прорабатывать все особенности проектов, предлагать действенные решения и достигать поставленных целей.
-							</p>
+						<div class="float_clear">
+							<div class="about_content">
+								<p class="about_title">Сейчас ...</p>
+								<p class="about_text">
+									Каждый день, начиная с 2007 года, мы получаем новый опыт. Это позволяет нам успешно решать задачи любого уровня. Мы превосходно находим общий язык, как с коммерческими компаниями, так и с государственными организациями.
+								</p>
+							</div>
+							<div class="about_content">
+								<p class="about_title">Факт ...</p>
+								<p class="about_text">
+									Многолетний опыт работы с Заказчиками из медицинской сферы позволяют нам быстро адаптироваться в любых, даже самых сложных отраслях. Мы отлично ориентируемся в медицине, спорте, beauty индустрии,  туризме и пр.
+								</p>
+							</div>
+							<div class="about_content">
+								<p class="about_title">Точка ...</p>
+								<p class="about_text">
+									Мы объединили профессионализм специалистов и современные инструменты интернет-индустрии. Это позволяет нам детально прорабатывать все особенности проектов, предлагать действенные решения и достигать поставленных целей.
+								</p>
+							</div>
 						</div>
 
 
 						<div class="reason">
-							<p>5 причин работать именно с нами:</p>
-							<ul>
-								<li>one</li>
-								<li>one</li>
-								<li>one</li>
-								<li>one</li>
-								<li>one</li>
-							</ul>
+							<h3><span>5</span> причин работать именно <span>с нами</span>:</h3>
+							<ol>
+								<li>
+									<h4>Открытость</h4>
+									<p>Мы всегда готовы к диалогу и убеждены в том, что именно тесное сотрудничество позволяет добиться максимального успеха.</p>
+								</li>
+								<li>
+									<h4>Креативность</h4>
+									<p>В современном бизнесе побеждает тот, кто умеет мыслить неординарно.</p>
+								</li>
+								<li>
+									<h4>Гибкость</h4>
+									<p>Есть только один способ преуспеть в постоянно меняющемся мире — меняться вместе с ним!</p>
+								</li>
+								<li>
+									<h4>Ответственность</h4>
+									<p>Мы согласовываем все важные шаги и предоставляем подробные ежемесячные отчеты.</p>
+								</li>
+								<li>
+									<h4>Честность</h4>
+									<p>У нас не бывает скрытых или неожиданных платежей: наши клиенты всегда знают, сколько и за что они платят.</p> 
+								</li>
+							</ol>
 						</div>
 					</div>
 				</section>
 			</div>
 
-			<div class="content_stl5 content_stl float_clear">
+			<div id="five" class="content_stl5 content_stl float_clear">
 				<section class="container">
-					<h2>form</h2>
+					<h2>Как связаться с нами</h2>
 					<div class="title_line_black"></div>
+
+					<div class="location">
+						<h3>Наше месторасположение</h3>
+						<h4>
+							Адрес:
+						</h4>
+						<p>
+							ул. Савушкина, 83 корпус 3, Санкт-Петербург
+						</p>
+						<h4>Телефон/факс:</h4>
+						<p>
+							+7 (812) 6000-512
+						</p>
+						<h4>Email:</h4>
+						<p>care@sotbi-it.ru</p>
+					</div>
+
 					<div>
-						this is form <br>
-						this is form <br>
-						this is form <br>
-						this is form <br>
-						this is form <br>
-						this is form <br>
-						this is form <br>
-						this is form <br>
-						this is form <br>
-						this is form <br>
+						<?php 
+						// если была нажата кнопка "Отправить"
+						if($_POST['submit']) {
+						        $name = substr(htmlspecialchars(trim($_POST['name'])), 0, 100);
+						        $email = substr(htmlspecialchars(trim($_POST['email'])), 0, 100);
+						        $tel = substr(htmlspecialchars(trim($_POST['tel'])), 0, 100);
+						        $to = 'web_tec@mail.ru';
+						        mail($to, $name, $tel, 'From:'.$email);
+						        echo 'Спасибо! Ваше письмо отправлено.';
+						}
+						?>
+						<form action="" method="POST" id="contactform" class="formaction" name="getcontact">
+							<input class="label_better" placeholder="Your name" data-position="left" data-new-placeholder="Your name:" type="text" name="name">
+							<input class="label_better" placeholder="Email" data-position="left" data-new-placeholder="Email:" type="email" name="email">
+							<input class="label_better" placeholder="Your phone" data-position="left" data-new-placeholder="Your phone:" type="tel" name="phone">
+							<input class="submit_btn" type="submit" value="Заказать звонок" name="submit">
+						</form>
 					</div>
 				</section>
 			</div>
 
 		</section>
 
+		<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3991.478209019165!2d30.250414459524528!3d59.98623684605405!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46963698c3411135%3A0x505e7b68b955e106!2z0YPQuy4g0KHQsNCy0YPRiNC60LjQvdCwLCA4MyDQutC-0YDQv9GD0YEgMywg0KHQsNC90LrRgi3Qn9C10YLQtdGA0LHRg9GA0LM!5e0!3m2!1sru!2sru!4v1392372424887" width="600" height="450" frameborder="0" style="border:0"></iframe>
 		<footer class="float_clear">
 
 			<section class="container">
@@ -382,6 +409,7 @@
 	<script src="js/jquery.label_better.min.js"></script>
 	<script src="js/jquery.slitslider.js"></script>
 	<script src="js/script.js"></script>
+
 
 </body>
 </html>
