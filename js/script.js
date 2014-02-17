@@ -58,7 +58,15 @@ Page.init();
 // modernizr check
 
 if (Modernizr.touch) {   
-    alert('Touch Screen');  
+    $('content_stl ul li').touchstart(function(){
+      $('content_stl ul li figcaption').addClass('touch_active').css({
+         "-webkit-transform": "translateY(0)",
+          "-moz-transform": "translateY(0)",
+          "-ms-transform": "translateY(0)",
+          "transform": "translateY(0)",
+          "opacity":"1"
+        })
+    });
 } else {
     $('.content_stl2 .clients > div img').hover(function(){
       $(this).addClass('scale_modernzr');

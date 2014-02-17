@@ -91,7 +91,7 @@ hgroup{
 	text-align: center;
 }
 #content{
-	background:url(../img/pattern1.png) #383f45;
+/*	background:url(../img/pattern1.png) #383f45;*/
 	padding-top: 0px;
 }
 .float_clear:after{
@@ -111,8 +111,8 @@ header p{
 }
 h1{
 	text-transform: uppercase;
-	font: normal 65px bold 'PT Sans Narrow', Arial, sans-serif;
 	font-size: 65px;
+	font-family: 'Russo One', sans-serif;
 	text-shadow: 2px 2px 5px rgba(0,0,0,.7);
 	line-height: 70px;
 }
@@ -143,14 +143,6 @@ h2{
 }
 .content_stl3 .our_servise .title_line_black, .title_line_black{
 	background: url(../img/intro-bg_black.png) no-repeat center center;
-	margin: 0 0 30px 0;
-	width: 100%;
-	height: 24px;
-	border: none;
-	opacity: 0.7;
-}
-.title_line{
-	background: url(../img/intro-bg.png) no-repeat center center;
 	margin: 0 0 30px 0;
 	width: 100%;
 	height: 24px;
@@ -240,8 +232,10 @@ h2{
 /*content*/
 .content_stl1, .content_stl3, .content_stl5{
 	background: #049e9c url(../img/pattern2.png);
-	border-bottom: 4px solid #006e6c;
+/*	border-bottom: 4px solid #006e6c;*/
 	padding: 80px 0;
+	margin: 20px;
+	border: 1px solid #999;
 }
 
 .cbp-so-side img{
@@ -249,11 +243,13 @@ h2{
 }
 
 .content_stl2, .content_stl4{
-	background: #3c3e3d url(../img/pattern3.png);
-	border-bottom: 4px solid #2c2c2c;
+	background: #dedede url(../img/pattern3.png);
+/*	border-bottom: 4px solid #ddd;*/
 	padding: 80px 0;
-	color: #e8eef3;
+	color: #3e3e3e;
 	text-align: justify;
+	margin: 20px;
+	border: 1px solid #999;
 }
 .content_stl2 .clients > div img{
 	width: 100%;
@@ -270,9 +266,6 @@ h2{
     transform: scale(1.1) translateY(-20px);
 }
 
-.content_stl2 .white{
-	color: #fff;
-}
 
 .grid{
 	padding: 0;
@@ -296,9 +289,9 @@ h2{
 .content_stl2 .clients > div > div{
 	padding: 10px;
 	background: #dedede;
-	background: rgba(255,255,255,0.3);
-	border-bottom: 4px solid #999;
-	color: #000;
+	background: rgba(0,0,0,0.7);
+	border-bottom: 4px solid #555;
+	color: #f1f1f1;
 }
 .content_stl2 .clients > div > div > h3{
 	padding-bottom: 10px;
@@ -325,14 +318,18 @@ h2{
 	float: none;
 	margin: 2.333333333333333%;
 	padding: 2.333333333333333%;
+	margin-bottom: 0;
+	padding-bottom: 0;
+}
+.content_stl3 ul > li > section{
 	color: #d8dee3;
 	background: #383f45;
 	background: rgba(56,63,69,.7);
+	padding: 20px;
 	-moz-border-radius: 4px;
 	-webkit-border-radius: 4px; 
 	-khtml-border-radius: 4px; 
 	border-radius: 4px; 
-	margin-bottom: 20px;
 }
 .content_stl3 ul > li h3{
 	font-size: 20px;
@@ -355,13 +352,16 @@ h2{
 	margin-top: 0;
 	padding-top: 0;
 }
+.content_stl4 .about .about_content:last-child{
+	margin-bottom: 70px;
+}
 .content_stl4 .about_title{
 	font-size: 30px;
 	margin: 20px 0;
 	color: #ed4e6e;
 }
 .content_stl4 .about_text{
-	font-size: 18px;
+	font-size: 20px;
 	line-height: 22px;
 }
 
@@ -373,8 +373,9 @@ h2{
 	-khtml-border-radius: 4px; 
 	border-radius: 4px;
 	padding: 15px;
-	background: #222;
+	background: #999;
 	text-align: center;
+	color: #000;
 }
 .reason span{
 	text-transform: uppercase;
@@ -393,7 +394,7 @@ h2{
 }
 .reason ol p{
 	text-indent: 15px;
-	color: #fff;
+	color: #3e3e3e;
 }
 
 /*location*/
@@ -436,15 +437,23 @@ input.label_better[name="name"]{
 	margin-top: 20px;
 	width: 100%;
 	font: normal 25px bold 'PT Sans Narrow', Arial, sans-serif;
-
 	background: rgb(220,236,87);
 	border-bottom: 4px solid rgb(180,196,47);
+	position: relative;
 }
 #contactform .submit_btn:hover{
 	cursor: pointer;
 }
+#contactform .submit_btn:before, #contactform .submit_btn:after{
+	content: '';
+	position: absolute;
+}
 #contactform .submit_btn:active{
-
+	bottom: -4px;
+	border-bottom: none;
+	-webkit-box-shadow: 0 2px 3px #333 inset, 2px 0 3px #333 inset, -2px 0 3px #333 inset;
+	-moz-box-shadow: 0 2px 3px #333 inset, 2px 0 3px #333 inset, -2px 0 3px #333 inset;
+	box-shadow: 0 2px 3px #333 inset, 2px 0 3px #333 inset, -2px 0 3px #333 inset;
 }
 
 .location{
@@ -704,6 +713,156 @@ footer .mail_sotbi a{
 	width: 96%;
 }
 
+/* Sides */
+.cbp-so-side {
+	-webkit-transition: -webkit-transform 0.5s, opacity 0.5s;
+	-moz-transition: -moz-transform 0.5s, opacity 0.5s;
+	transition: transform 0.5s, opacity 0.5s;
+}
+
+
+
+/* Initial state (hidden or anything else) */
+.cbp-so-init .cbp-so-side {
+	opacity: 0;
+}
+
+.cbp-so-init .cbp-so-side-left {
+	-webkit-transform: translateX(-80px);
+	-moz-transform: translateX(-80px);
+	transform: translateX(-80px);
+}
+
+.cbp-so-init .cbp-so-side-right {
+	-webkit-transform: translateX(80px);
+	-moz-transform: translateX(80px);
+	transform: translateX(80px);
+}
+
+/* Animated state */
+/* add you final states (transition) or your effects (animations) for each side */
+.cbp-so-section.cbp-so-animate .cbp-so-side-left,
+.cbp-so-section.cbp-so-animate .cbp-so-side-right {
+	-webkit-transform: translateX(0px);
+	-moz-transform: translateX(0px);
+	transform: translateX(0px);
+	opacity: 1;
+}
+
+
+.sl-slider-wrapper {
+	height: 500px;
+	margin: 0 auto;
+	position: relative;
+	overflow: hidden;
+}
+
+.sl-slider {
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+/* Slide wrapper and slides */
+
+.sl-slide,
+.sl-slides-wrapper,
+.sl-slide-inner {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+} 
+
+.sl-slide {
+	z-index: 1;
+}
+
+/* The duplicate parts/slices */
+
+.sl-content-slice {
+	overflow: hidden;
+	position: absolute;
+	-webkit-box-sizing: content-box;
+	-moz-box-sizing: content-box;
+	box-sizing: content-box;
+	background: #fff;
+	-webkit-backface-visibility: hidden;
+	-moz-backface-visibility: hidden;
+	-o-backface-visibility: hidden;
+	-ms-backface-visibility: hidden;
+	backface-visibility: hidden;
+	opacity : 1;
+}
+
+/* Horizontal slice */
+
+.sl-slide-horizontal .sl-content-slice {
+	width: 100%;
+	height: 50%;
+	left: -200px;
+	-webkit-transform: translateY(0%) scale(1);
+	-moz-transform: translateY(0%) scale(1);
+	-o-transform: translateY(0%) scale(1);
+	-ms-transform: translateY(0%) scale(1);
+	transform: translateY(0%) scale(1);
+}
+
+.sl-slide-horizontal .sl-content-slice:first-child {
+	top: -200px;
+	padding: 200px 200px 0px 200px;
+}
+
+.sl-slide-horizontal .sl-content-slice:nth-child(2) {
+	top: 50%;
+	padding: 0px 200px 200px 200px;
+}
+
+/* Vertical slice */
+
+.sl-slide-vertical .sl-content-slice {
+	width: 50%;
+	height: 100%;
+	top: -200px;
+	-webkit-transform: translateX(0%) scale(1);
+	-moz-transform: translateX(0%) scale(1);
+	-o-transform: translateX(0%) scale(1);
+	-ms-transform: translateX(0%) scale(1);
+	transform: translateX(0%) scale(1);
+}
+
+.sl-slide-vertical .sl-content-slice:first-child {
+	left: -200px;
+	padding: 200px 0px 200px 200px;
+}
+
+.sl-slide-vertical .sl-content-slice:nth-child(2) {
+	left: 50%;
+	padding: 200px 200px 200px 0px;
+}
+
+/* Content wrapper */
+/* Width and height is set dynamically */
+.sl-content-wrapper {
+	position: absolute;
+}
+
+.sl-content {
+	width: 100%;
+	height: 100%;
+	background: #fff;
+}
+
+/* Default styles for background colors */
+.sl-slide-horizontal .sl-slide-inner {
+	background: #ddd;
+}
+
+.sl-slide-vertical .sl-slide-inner {
+	background: #ccc;
+}
+
 /*maps*/
 iframe{
 	width: 100%;
@@ -748,6 +907,10 @@ iframe{
 	.no-touch .cs-style-3 figure:hover figcaption, .cs-style-3 figure.cs-hover figcaption{
 		width: 360px;
 	}
+	.content_stl3 .our_servise > div > p{
+		margin-right: 3%;
+		margin-left: 3%;
+	}
 }
 
 
@@ -762,8 +925,11 @@ iframe{
 		display: none;
 	}
 	.container{
-		width: 740px;
+		width: 685px;
 		padding-bottom: 20px;
+	}
+	#menu_container{
+		width: 740px;
 	}
 
 	/*menu*/
@@ -814,10 +980,10 @@ iframe{
 /*media screen*/
 @media all and (min-width: 980px){
 	.menu nav a{
-		margin-left: 36px;
+		margin-left: 27px;
 	}
-	.container{
-		width: 940px;
+	.container, #menu_container{
+		width: 900px;
 		padding-bottom: 20px;
 	}
 	.parallax{
@@ -828,8 +994,11 @@ iframe{
 		float: left;
 		width: 24%;
 		margin-bottom: 0;
-		height: 300px;
 	}
+	.content_stl3 ul > li > section{
+		height: 400px;
+	}
+
 	.content_stl4 .about .about_content{
 		width: 24%;
 		float: left;
@@ -851,12 +1020,13 @@ iframe{
 /*media high screen*/
 @media all and (min-width: 1200px){
 	/*all*/
-	.container{
-		width: 1170px;
+	.container,#menu_container{
+		width: 1130px;
 	}
+
 	/*menu*/
 	.menu nav a{
-		margin-left: 69px;
+		margin-left: 60px;
 	}
 	/*content*/
 	.content_stl2 .clients > div{
@@ -866,9 +1036,6 @@ iframe{
 	}
 	.content_stl2 .clients > div > div{
 		padding: 10px;
-		background: #dedede;
-		background: rgba(255,255,255,0.3);
-		border-bottom: 4px solid #999;
 	}
 	.content_stl2 .clients > div > div > h3{
 		padding-bottom: 10px;
