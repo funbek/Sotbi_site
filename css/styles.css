@@ -63,7 +63,8 @@ button::-moz-focus-inner,
 
 /*all*/
 body{
-	overflow-x: hidden; 
+	overflow-x: hidden;
+	font-family: 'PT Sans Narrow', Arial, sans-serif;
 }
 .mobile_resolution{
 	display: block;
@@ -139,6 +140,8 @@ h2.sub_name{
 
 h2{
 	font: normal 50px bold 'PT Sans Narrow', Arial, sans-serif;
+	font-size: 50px;
+	font-family: 'PT Sans Narrow', Arial, sans-serif;
 	margin-bottom: 5px;
 }
 .content_stl3 .our_servise .title_line_black, .title_line_black{
@@ -231,7 +234,7 @@ h2{
 
 /*content*/
 .content_stl1, .content_stl3, .content_stl5{
-	background: #049e9c url(../img/pattern2.png);
+	background: #049e9c url(../img/pattern2.png) fixed;
 /*	border-bottom: 4px solid #006e6c;*/
 	padding: 80px 0;
 	margin: 20px;
@@ -243,7 +246,7 @@ h2{
 }
 
 .content_stl2, .content_stl4{
-	background: #dedede url(../img/pattern3.png);
+	background: #dedede url(../img/pattern3.png) fixed;
 /*	border-bottom: 4px solid #ddd;*/
 	padding: 80px 0;
 	color: #3e3e3e;
@@ -383,17 +386,17 @@ h2{
 }
 .about .reason ol li{
 	line-height: 25px;
-	font-size: 20px;
 	list-style: decimal;
 	list-style-position: inside;
 	color: #ed4e6e;
 }
-.reason ol h4{
+.reason ol li{
 	font-size: 25px;
 	margin: 15px 0;
 }
 .reason ol p{
 	text-indent: 15px;
+	font-size: 20px;
 	color: #3e3e3e;
 }
 
@@ -402,6 +405,7 @@ h2{
 	width: 100%;
 	float: none;
 	margin-left: 0;
+	text-align: center;
 }
 #contactform input{
 	border: none;
@@ -411,6 +415,8 @@ h2{
 	-webkit-border-radius: 2px; 
 	-khtml-border-radius: 2px; 
 	border-radius: 2px;
+	margin-left: auto;
+	margin-right: auto;
 }
 #contactform input.submit_btn{
 	padding: 10px 3%;
@@ -437,6 +443,9 @@ input.label_better[name="name"]{
 	margin-top: 20px;
 	width: 100%;
 	font: normal 25px bold 'PT Sans Narrow', Arial, sans-serif;
+	font-size: 25px;
+	font-weight: bold;
+	font-family: 'PT Sans Narrow', Arial, sans-serif;
 	background: rgb(220,236,87);
 	border-bottom: 4px solid rgb(180,196,47);
 	position: relative;
@@ -512,6 +521,9 @@ footer .mail_sotbi a{
 
 
 /*plagins effect */
+/*Parallax effect*/
+
+
 /* Effect 1: Brackets */
 .cl-effect-1::before,
 .cl-effect-1::after {
@@ -939,6 +951,7 @@ iframe{
 	.menu nav a{
 		color: #fff;
 		font: normal 30px bold 'PT Sans Narrow', Arial, sans-serif;
+		font-size: 30px;
 		text-decoration: none;
 		display: block;
 		float: left;
