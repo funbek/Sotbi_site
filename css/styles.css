@@ -221,13 +221,15 @@ h2{
 .menu nav select{
 	float: none;
 	margin-left: 0;
-	width: 100%;
+	width: 75%;
 	margin: 0;
 }
 .logo_img{
-	float: none;
-	margin: 0 auto 5px;
+	width: 20%;
+	height: 34px;
+	margin-right: 5%;
 }
+
 #sticker-sticky-wrapper{
 	height: 46px !important;
 }
@@ -517,12 +519,8 @@ footer .mail_sotbi a{
 	color: #fff;
 }
 
-
-
-
 /*plagins effect */
 /*Parallax effect*/
-
 
 /* Effect 1: Brackets */
 .cl-effect-1::before,
