@@ -153,6 +153,24 @@ h2{
 	opacity: 0.7;
 }
 
+
+#menu_container .mobile_resolution{
+	width: 250px;
+	float: left;
+}
+.mobile_resolution #menu_mobile{
+	display: block;
+	width: 100%;
+	margin: 0;
+	color: #eaeaea;
+	background: #3a3a3a;
+	border: none;
+	padding: 10px;
+}
+
+/*animation icon*/
+
+/*end animation icon*/
 .socila_header{
 	width: 140px;
 	float: right;
@@ -179,11 +197,7 @@ h2{
 	-ms-transition: all 0.7s ease-in-out;
 }
 .socila_header > a:hover{
-    -moz-transform: rotate(360deg); /* Для Firefox */
-    -ms-transform: rotate(360deg); /* Для IE */
-    -webkit-transform: rotate(360deg); /* Для Safari, Chrome, iOS */
-    -o-transform: rotate(360deg); /* Для Opera */
-    transform: rotate(360deg);
+
 }
 
 .facebook{
@@ -206,23 +220,9 @@ h2{
 .menu .socila_header{
 	width: 140px;
 }
-.menu nav select{
-	float: left;
-	border: none;
-	width: 250px;
-	background: #3c3941;
-	padding: 8px 10px;
-	color: #fff;
-	margin-left: 25px;
-}
+
 .mobile{
 	display: none;
-}
-.menu nav select{
-	float: none;
-	margin-left: 0;
-	width: 75%;
-	margin: 0;
 }
 .logo_img{
 	width: 20%;
@@ -883,15 +883,6 @@ iframe{
 @media all and (min-width: 591px){
 	.mobile{
 		display: block;
-	}
-	.menu nav select{
-		float: left;
-		border: none;
-		width: 250px;
-		background: #3c3941;
-		padding: 10px 10px;
-		color: #fff;
-		margin-left: 15px;
 	}
 	.logo_img{
 		float: left;
