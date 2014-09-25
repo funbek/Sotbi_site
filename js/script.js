@@ -79,14 +79,28 @@ if (Modernizr.touch) {
 $('a[href^="#"]').bind('click.smoothscroll',function (e) {
  e.preventDefault();
  
-var target = this.hash,
- $target = $(target);
- 
-$('html, body').stop().animate({
- 'scrollTop': $target.offset().top
- }, 500, 'swing', function () {
- window.location.hash = target;
- });
+  var target = this.hash,
+  $target = $(target);
+   
+  $('html, body').stop().animate({
+   'scrollTop': $target.offset().top
+   }, 500, 'swing', function () {
+   window.location.hash = target;
+   });
  });
 
-      });
+  // видео с Youtube
+
+
+  function setHeight(){
+    var window_height = $(window).outerHeight(); /*узнаем высоту браузера*/
+    var sticker_height = $("#sticker-sticky-wrapper ").outerHeight(); /*узнаем высоту меню*/
+    $('.parallax').css({
+      height: window_height-sticker_height
+    });
+  }
+  setHeight();
+  $(window).resize(function(){
+    setHeight();
+  })
+});
